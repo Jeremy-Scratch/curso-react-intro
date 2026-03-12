@@ -1,38 +1,36 @@
 .App {
-  text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.DeleteIcon {
+
+    padding: 3px;   
+    transition: all;
+    transition: ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.DeleteIcon :hover{
+
+    color:red;
+    transform: scale(110%);
+   
 }
 
-.App-header {
-  background-color: #233553;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AddIcon {
+    padding: 3px;
+    color: rgb(0, 140, 255);
+    transition-property: all;
+    transition: ease-in-out;
+    transition-duration: 300ms;
 }
 
-.App-link {
-  color: #97ca3f;
+.AddIcon :hover{
+    color: green;
+    transform: scale(103%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.onClickSkew :active{
+    transform: skewy(5deg);
 }
