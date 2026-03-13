@@ -9,10 +9,11 @@ import { TodoLoading } from '../components/TodoLoading';
 import { TodoError } from '../components/TodoError';
 import { TodoEmpty } from '../components/TodoEmpty';
 import { TodoContext } from '../todoContext';
+import { Modal } from '../Modal';
 
 
 function AppUi() {
-    const { loading, error, searched, completeT, deteleTodo } = React.useContext(TodoContext);
+    const { loading, error, searched, completeT, deteleTodo, openModal, setOpenModal } = React.useContext(TodoContext);
     return (
         <div className="App">
 
@@ -33,6 +34,8 @@ function AppUi() {
             </TodoList>
 
             <CreateTodoButton />
+            {openModal && (<Modal>open</Modal>)}
+            
         </div>
     );
 }
