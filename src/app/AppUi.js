@@ -14,7 +14,7 @@ import {TodoForm} from '../components/TodoForm/index';
 
 
 function AppUi() {
-    const { loading, error, searched, completeT, deteleTodo, openModal, setOpenModal } = React.useContext(TodoContext);
+    const { loading, error, searched, completeT, deteleTodo, openModal } = React.useContext(TodoContext);
     return (
         <div className="App">
 
