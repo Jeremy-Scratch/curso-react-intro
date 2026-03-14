@@ -10,6 +10,7 @@ import { TodoError } from '../components/TodoError';
 import { TodoEmpty } from '../components/TodoEmpty';
 import { TodoContext } from '../todoContext';
 import { Modal } from '../Modal';
+import {TodoForm} from '../components/TodoForm/index';
 
 
 function AppUi() {
@@ -34,7 +35,10 @@ function AppUi() {
             </TodoList>
 
             <CreateTodoButton />
-            {openModal && (<Modal>open</Modal>)}
+            {openModal && (
+                <Modal>
+                    <TodoForm/>
+                </Modal>)}
             
         </div>
     );
